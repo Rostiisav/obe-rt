@@ -99,6 +99,13 @@ enum input_type_e
 //    INPUT_DEVICE_ASI,
 };
 
+enum tc_source_e
+{
+    TC_SOURCE_NONE,
+    TC_SOURCE_RP188,
+    TC_SOURCE_VITC,
+};
+
 typedef struct
 {
     int input_type;
@@ -109,6 +116,7 @@ typedef struct
     int video_format;
     int video_connection;
     int audio_connection;
+    int tc_source;
 } obe_input_t;
 
 /**** Stream Formats ****/
@@ -420,6 +428,7 @@ typedef struct
     int sdi_audio_pair;
     uint64_t channel_layout;
     int mono_channel;
+    int audio_offset; /* in milliseconds */
 
     /* Metadata */
     obe_audio_metadata_t audio_metadata;
