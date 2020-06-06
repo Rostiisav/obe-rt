@@ -1630,7 +1630,7 @@ int main(int argc, char **argv)
     {
         return run_with_config();
     }
-    else if (j == 's')
+    else if (j == 's' || argc < 2)
     {
         return run_cmd_prompt(history_filename);
     }
