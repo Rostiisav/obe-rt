@@ -1582,7 +1582,7 @@ static int run_cmd_prompt(char *history_filename)
 int main(int argc, char **argv)
 {
     /**/
-    int j = '';
+    char j = ' ';
     while ((j = getopt_long(argc, argv, short_options, long_options, NULL)) != -1)
     {
         switch (j)
