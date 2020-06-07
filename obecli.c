@@ -33,6 +33,7 @@
 #include "config.h"
 
 #include <signal.h>
+#define _GNU_SOURCE
 
 #include <readline/readline.h>
 #include <readline/history.h>
@@ -53,8 +54,6 @@ typedef struct
     obe_mux_opts_t mux_opts;
     obe_output_opts_t output;
     int avc_profile;
-    int run_shell;
-    char *config_file;
 } obecli_ctx_t;
 
 obecli_ctx_t cli;
